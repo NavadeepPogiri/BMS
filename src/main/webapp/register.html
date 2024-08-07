@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+ body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color: #414aad;
+	padding: 10px ;
+
+}
+
+.oo {
+	color: white;
+	text-decoration: none;
+	margin-right: 20px;
+	transition: color 0.3s ease-in-out;
+	padding: 5px;
+}
+
+.oo:hover {
+	color: #101ca2;
+	background-color:#c3c3c3;
+	border-radius: 3px;
+	transition: color 0.4s ease-in-out;
+}
+
+fieldset {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #fff;
+   border-color: #333;
+}
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+td {
+    padding: 5px;
+}
+
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="text"]
+{
+    width: fit-content;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-color: gray;
+    
+    
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #414aad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #101ca2;
+}
+.log {
+    color: #190492;
+    text-decoration: none;
+}
+
+.log:hover {
+    color: #0e239c;
+}
+</style>
+<script>
+	function check(){
+      var acno=t1.accno.value;
+      var nme=t1.name.value;
+      var paswrd=t1.password.value;
+      var cpaswrd=t1.cpassword.value;
+	  if(acno==""){
+		document.getElementById("ano").innerHTML="*Account Number cannot be empty";
+		return false;
+	  }
+	  if(acno.length>11||acno.length<11){
+		document.getElementById("ano").innerHTML="*Account Number must contain 11 numbers";
+		return false;
+	  }
+	 
+
+	  if(pswd==""){
+		  document.getElementById("pswd").innerHTML="*Password field cannot be empty";
+			return false;
+	  }
+	  if(mobile.length()>10||mobile.length()<10){
+		  document.getElementById("mobile").innerHTML="*mobile number length should be 10 ";
+			return false;
+	  }
+	  else{
+		  return true;
+	  }
+
+	}
+</script>
+</head>
+<body>
+	<center>
+		<h1>SFDC BANK</h1>
+		<h4>EXTRA ORDINARY SERVICES</h4>
+		<header>
+			<a href="home.html" class="oo">Home</a>&nbsp;&nbsp; 
+            <a href="register.html" class="oo">Register</a>&nbsp;&nbsp;
+			<a href="login.html" class="oo">Login</a>&nbsp;&nbsp; 
+            <a href="about.html" class="oo">About Us</a>&nbsp;&nbsp;
+		</header>
+				<fieldset class="peace">
+				<form action="Register" method="post" name="t1" onsubmit="return check()">
+					<h2>Register Here</h2>
+					<table>
+					<tr>
+							<td><label for="accountnumber">Account Number:</label></td>
+							<td><input type="text" name="accno" id="acno"><br>
+							<span id="ano"></span></td>
+						</tr>
+						<tr>
+							<td><label for="name">Enter your name:</label></td>
+							<td><input type="text" name="name" id="ne"><br>
+							<span id="nme"></span></td>
+						</tr>
+						<tr>
+							<td><label for="password">Enter your password:</label></td>
+							<td><input type="password" name="password" id="password"><br>
+							<span id="pswd"></span></td>
+						</tr>
+						<tr>
+							<td><label for="cpassword">Confirm Password:</label></td>
+							<td><input type="password" name="cpassword" id="cpassword"><br>
+							<span id="cpswd"></span></td>
+						</tr>
+						<tr>
+							<td><label for="amount">Amount:</label></td>
+							<td><input type="number" name="amount" id="amount"></td>
+							
+						</tr>
+						<tr>
+							<td><label for="address">Address:</label></td>
+							<td><input type="text" name="address" id="address"></td>
+						</tr>
+						<tr>
+							<td><label for="mobile">Mobile Number:</label></td>
+							<td><input type="tel" name="mobile" maxlength="10" id=""></td>
+							<span id="mobile"></span></td>
+						</tr>
+						
+						
+					</table>
+					<input type="submit" value="Submit"> 
+					<input type="reset"  value="Clear">
+
+					<footer>
+						Have an account?<a href="login.html" class="log">login</a>
+					</footer>
+				</form>
+				</fieldset>
+			
+		
+	</fieldset>
+	
+	</center>
+</body>
+</html>

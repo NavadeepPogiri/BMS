@@ -1,0 +1,143 @@
+<style type="text/css">
+ body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color: #414aad;
+	padding: 10px ;
+
+}
+
+.oo {
+	color: white;
+	text-decoration: none;
+	margin-right: 20px;
+	transition: color 0.3s ease-in-out;
+	padding: 5px;
+}
+
+.oo:hover {
+	color: #101ca2;
+	background-color:#c3c3c3;
+	border-radius: 3px;
+	transition: color 0.4s ease-in-out;
+}
+
+fieldset {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    background-color: #fff;
+   border-color: #333;
+}
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+td {
+    padding: 5px;
+}
+
+input[type="password"],
+input[type="text"],
+input[type="number"]
+{
+    width: fit-content;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #414aad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #101ca2;
+}
+.lo{
+    color: #190492;
+    text-decoration: none;
+}
+
+.lo:hover {
+    color: #0e239c;
+}
+</style>
+<body>
+	<center>
+		<h1>
+			<pre>SFDC BANK</pre>
+		</h1>
+		<h4>EXTRA ORDINARY SERVICES</h4>
+		<header>
+			<a href="home.html" class="oo">Home</a>&nbsp;&nbsp; <a href="register.html" class="oo">Register</a>&nbsp;&nbsp;
+			<a href="login.html" class="oo">Login</a>&nbsp;&nbsp; <a href="deposit.html" class="oo">Deposit</a>&nbsp;&nbsp;
+			<a href="withdraw.html" class="oo">Withdraw</a>&nbsp;&nbsp; <a
+				href="transfer.html" class="oo">Transfer</a>&nbsp;&nbsp; <a href="about.html" class="oo">About
+				Us</a>&nbsp;&nbsp;
+		</header>
+
+		<fieldset>
+			<b><h2>TRANSFER FORM</h2></b>
+
+
+			<form action="Transfer" method="post">
+				<table>
+					<tr>
+						<b><td>Account Number:</td></b>
+						<td><input type="text" name="accno"></td>
+
+					</tr>
+					<tr>
+						<b><td>Name:</td></b>
+						<td><input type="text" name="name"></td>
+
+					</tr>
+
+
+					<tr>
+						<b><td>Password:</td></b>
+						<td><input type="password" name="password"></td>
+
+					</tr>
+					<tr>
+						<b><td>Target Account No:</td></b>
+						<td><input type="taccno" name="taccno"></td>
+
+					</tr>
+					<tr>
+						<b><td>Amount:</td></b>
+						<td><input type="number" name="amount"></td>
+
+					</tr>
+
+				</table>
+				<p></p>
+				<input type="submit" value="Submit"> 
+				<input type="reset"	value="Clear">
+
+
+			</form>
+
+		</fieldset>
+
+
+	</center>
+</body>
+</html>
